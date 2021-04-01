@@ -65,8 +65,21 @@
     //console.log(audio);
     if (!audio) return; // stop the function running all together
     audio.currentTime = 0; // rewind to the start
-    audio.play();
-    key.classList.add('playing');
+    
+    let promise = document.querySelector('audio').play();
+
+    if (promise !== undefined) {
+      promise.then(_ => {
+        key.classList.add('playing'); // audio is playing
+
+      }).catch(error => {
+        // console.log(e);
+        alert(`"${e.key}" requires focus before it can play audio`); // unable to play audio
+      });
+    }
+
+    //audio.play();
+    
   };
   
   function removeTransition(e) {
