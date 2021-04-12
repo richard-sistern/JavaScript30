@@ -33,14 +33,28 @@ const comments = [
     console.log({isAdult}); // {} show name of var and value
     
     // Array.prototype.every() // is everyone 19 or older?
-    const AllAdults = people.every(person => {
+    const allAdults = people.every(person => {
         const currentYear = (new Date()).getFullYear();
         return currentYear - person.year >= 19;
     });
 
-    console.log({ AllAdults }); // Should be false
+    console.log({allAdults}); // Should be false
 
     // Array.prototype.find()
+    // const comment = Comments.find(function(comment) {
+    //     if(comment.id === 823423) {
+    //         return true;
+    //     }
+    // });
+
+    // const comment = comments.find(comment => {
+    //     return comment.id === 823423;
+    // });
+
+    const comment = comments.find(comment => comment.id === 823423);
+
+    console.log(comment);
+
     // Find is like filter, but instead returns just the one you are looking for
     // find the comment with the ID of 823423
 
