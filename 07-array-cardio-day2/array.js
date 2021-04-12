@@ -32,14 +32,13 @@ const comments = [
 
     console.log({isAdult}); // {} show name of var and value
     
-    
     // Array.prototype.every() // is everyone 19 or older?
-    // const allAdult = people.some(person => {
-    // const currentYear = (new Date()).getFullYear();
-    // return currentYear - person.year >= 19;
+    const AllAdults = people.every(person => {
+        const currentYear = (new Date()).getFullYear();
+        return currentYear - person.year >= 19;
+    });
 
-    // console.log({ isAdult });
-
+    console.log({ AllAdults }); // Should be false
 
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
