@@ -4,7 +4,7 @@ const ctx = canvas.getContext('2d');
 // Size canvas to window 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-
+// TODO: Resize canvas with window resize
 
 ctx.strokeStyle  = '#BADA55';
 ctx.lineJoin = 'round';
