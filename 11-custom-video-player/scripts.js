@@ -63,3 +63,5 @@ let mousedown = false;
 progress.addEventListener('mousemove', (e) => mousedown && scrub(e)); // when mousedown and mousemove then scrub
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
+
+// TODO: Wire up a fullscreen button
